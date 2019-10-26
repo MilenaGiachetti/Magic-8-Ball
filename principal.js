@@ -1,6 +1,8 @@
 var contenedorRespuesta = document.getElementById('contenedorRespuesta');
 var btnSubmit = document.getElementById('submit');
 var pregunta = document.getElementById('pregunta');
+var contenedorTitulos = document.getElementById('contenedorTitulos');
+var titulo = document.getElementById('titulo');
 var nuevaPregunta = document.getElementById('nuevaPregunta');
 nuevaPregunta.setAttribute('class','desaparecer');
 var respuestasPosibles = [
@@ -25,17 +27,19 @@ function predecir (){
 
 btnSubmit.addEventListener('click', predecir);
 btnSubmit.addEventListener('click', function(){
-    var preguntaImprimir = document.createElement('p');
+    var preguntaImprimir = document.createElement('h2');
     var contenidoPregunta = document.createTextNode(pregunta.value);
     preguntaImprimir.appendChild(contenidoPregunta);
-    contenedorPregunta.appendChild(preguntaImprimir);
+    contenedorTitulos.appendChild(preguntaImprimir);
     pregunta.setAttribute('class','desaparecer');
     submit.setAttribute('class','desaparecer');
+    titulo.setAttribute('class','desaparecer');
     nuevaPregunta.setAttribute('class','aparecer');
 });
 nuevaPregunta.addEventListener('click', function(){
-    pregunta.setAttribute('class','aparecer');
+    window.location.reload(true);
+    /*pregunta.setAttribute('class','aparecer');
     submit.setAttribute('class','aparecer');
-    nuevaPregunta.setAttribute('class','desaparecer');
+    nuevaPregunta.setAttribute('class','desaparecer');*/
 });
 
