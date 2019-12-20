@@ -24,7 +24,10 @@ function predecir (){
     respuesta.appendChild(contenido);
     contenedorRespuesta.appendChild(respuesta);
 }
-
+preguntar.addEventListener('keyup', function(){
+    if(event.which === 13|| event.keyCode == 13){
+       predecir();
+});
 btnSubmit.addEventListener('click', predecir);
 btnSubmit.addEventListener('click', function(){
     var preguntaImprimir = document.createElement('h2');
