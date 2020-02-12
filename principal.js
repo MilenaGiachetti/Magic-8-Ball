@@ -27,6 +27,7 @@ function predecir (){
 preguntar.addEventListener('keyup', function(){
     if(event.which === 13|| event.keyCode == 13){
        predecir();
+    };
 });
 btnSubmit.addEventListener('click', predecir);
 btnSubmit.addEventListener('click', function(){
