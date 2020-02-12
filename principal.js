@@ -24,7 +24,7 @@ function predecir (){
     respuesta.appendChild(contenido);
     contenedorRespuesta.appendChild(respuesta);
 }
-preguntar.addEventListener('keyup', function(){
+pregunta.addEventListener('keyup', function(){
     if(event.which === 13|| event.keyCode == 13){
        predecir();
     };
